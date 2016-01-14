@@ -24,6 +24,7 @@ func main() {
 	flag.Parse()
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "ttyecho: [-n] DEVNAME COMMAND\n")
+		flag.PrintDefaults()
 	}
 	if flag.Arg(0) == "" || flag.Arg(1) == "" {
 		flag.Usage()
